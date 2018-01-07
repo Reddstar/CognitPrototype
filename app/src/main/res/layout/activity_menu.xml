@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ufrpe.cognit.cognitprototype.StudentMenuActivity"
+    android:background="@drawable/menu_art">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageButton
+            android:id="@+id/btn_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_classes"
+            android:backgroundTint="@color/colorPrimary"/>
+        <ImageButton
+            android:id="@+id/btn_ranking"
+            android:layout_below="@+id/btn_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_ranking"
+            android:backgroundTint="@color/colorPrimary"/>
+        <ImageButton
+            android:id="@+id/btn_store"
+            android:layout_below="@+id/btn_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_store"
+            android:backgroundTint="@color/colorPrimary"/>
+        <ImageButton
+            android:id="@+id/btn_achievements"
+            android:layout_below="@+id/btn_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_achievements"
+            android:backgroundTint="@color/colorPrimary"/>
+    </RelativeLayout>
+
+</RelativeLayout>
