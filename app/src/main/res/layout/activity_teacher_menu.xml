@@ -28,7 +28,7 @@
             android:layout_below="@+id/btn_activities"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/btn_classes"
+            android:src="@drawable/btn_content"
             android:backgroundTint="@color/colorPrimary"/>
     </RelativeLayout>
 

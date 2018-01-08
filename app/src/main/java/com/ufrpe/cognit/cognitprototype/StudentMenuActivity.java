@@ -26,6 +26,7 @@ public class StudentMenuActivity extends AppCompatActivity {
         btnRanking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RankingActivity.setState(0);
                 Intent goRanking = new Intent(StudentMenuActivity.this, RankingActivity.class);
                 startActivity(goRanking);
             }

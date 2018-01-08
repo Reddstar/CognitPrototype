@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ufrpe.cognit.cognitprototype.RankingActivity"
-    android:background="@drawable/ranking_art">
-
+    tools:context="com.ufrpe.cognit.cognitprototype.MyRoomActivity"
+    android:background="@drawable/my_room_art">
     <ListView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
@@ -15,6 +13,12 @@
         android:layout_marginTop="75dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="90dp" />
+    <ImageButton
+        android:id="@+id/btn_create_room"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@null"/>
 
 </RelativeLayout>
