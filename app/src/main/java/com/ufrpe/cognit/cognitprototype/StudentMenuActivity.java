@@ -19,7 +19,7 @@ public class StudentMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         btnRanking = findViewById(R.id.btn_ranking);
-        btnClasses = findViewById(R.id.btn_achievements);
+        btnClasses = findViewById(R.id.btn_classes);
         btnStore = findViewById(R.id.btn_store);
         btnAchievements = findViewById(R.id.btn_achievements);
 
@@ -33,7 +33,8 @@ public class StudentMenuActivity extends AppCompatActivity {
         btnClasses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent goClasses = new Intent(StudentMenuActivity.this, ClassesActivity.class);
+                startActivity(goClasses);
             }
         });
         btnStore.setOnClickListener(new View.OnClickListener() {
