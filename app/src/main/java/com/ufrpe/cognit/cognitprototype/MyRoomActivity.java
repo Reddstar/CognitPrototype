@@ -48,6 +48,8 @@ public class MyRoomActivity extends AppCompatActivity {
 
         RoomItem item = new RoomItem("room_1");
         roomItems.add(item);
+        item = new RoomItem("room_1");
+        roomItems.add(item);
         populate();
 
 

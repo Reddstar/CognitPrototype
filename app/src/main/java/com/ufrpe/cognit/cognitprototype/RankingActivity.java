@@ -1,6 +1,8 @@
 package com.ufrpe.cognit.cognitprototype;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -41,8 +44,13 @@ public class RankingActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                currentName = studentItems.get(position).getName();
-                showProfile();
+                if (state == 0) {
+                    currentName = studentItems.get(position).getName();
+                    showProfile();
+                } else if (state == 1){
+                    currentName = studentItems.get(position).getName();
+                    showOnStudentProfile(position);
+                }
             }
         });
 
@@ -79,6 +87,42 @@ public class RankingActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
         dialog.getWindow().setBackgroundDrawableResource(R.color.colorPrimary);
+    }
+    public void showOnStudentProfile(final int position){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_student_view, null);
+        TextView text = dialogView.findViewById(R.id.textName);
+        text.setText(currentName);
+        Button btn = dialogView.findViewById(R.id.btn_exclude);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showExcludeDialog(position);
+            }
+        });
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        dialog.getWindow().setBackgroundDrawableResource(R.color.colorPrimary);
+    }
+
+    public void showExcludeDialog(final int position){
+        AlertDialog builder = new AlertDialog.Builder(this)
+                .setTitle("Excluir")
+                .setMessage("Deseja excluir o aluno?")
+                .setPositiveButton("SIM", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        studentItems.remove(position);
+                        populate();
+                    }
+
+                })
+                .setNegativeButton("NÃO", null)
+                .show();
+        builder.show();
     }
 
     private class RankingAdapter extends ArrayAdapter<StudentItem> {
