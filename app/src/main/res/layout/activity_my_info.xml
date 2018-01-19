@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ufrpe.cognit.cognitprototype.TeacherMenuActivity"
+    android:background="@drawable/menu_art">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:textColor="#ffff"
+            android:text="Nome"
+            android:layout_marginLeft="20dp"/>
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_below="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Mariana Silva"
+            android:textSize="26dp"/>
+        <TextView
+            android:id="@+id/textCpf"
+            android:layout_below="@id/edtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26dp"
+            android:textColor="#ffff"
+            android:text="CPF"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"/>
+        <EditText
+            android:id="@+id/edtcpf"
+            android:layout_below="@+id/textCpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="12dp"
+            android:textSize="26dp"
+            android:text="03323423212"/>
+
+        <ImageButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/btn_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_below="@+id/edtcpf"
+            android:layout_marginTop="30dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

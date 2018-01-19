@@ -34,6 +34,7 @@ public class TeacherMenuActivity extends AppCompatActivity {
         btnTeacherActivities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ClassesActivity.state = 1;
                 Intent goActivities = new Intent(TeacherMenuActivity.this, ClassesActivity.class);
                 startActivity(goActivities);
             }
