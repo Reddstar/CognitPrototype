@@ -21,7 +21,6 @@ public class MyRoomActivity extends AppCompatActivity {
 
     private ListView listView;
     private ArrayList<RoomItem> roomItems = new ArrayList<>();
-    private ImageButton btnCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class MyRoomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_room);
 
         listView = findViewById(R.id.recycler);
-        btnCreate = findViewById(R.id.btn_create_room);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -38,14 +36,6 @@ public class MyRoomActivity extends AppCompatActivity {
                 startActivity(goList);
             }
         });
-        btnCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goCreation = new Intent(MyRoomActivity.this, RoomCreationActivity.class);
-                startActivity(goCreation);
-            }
-        });
-
         RoomItem item = new RoomItem("room_1");
         roomItems.add(item);
         item = new RoomItem("room_1");

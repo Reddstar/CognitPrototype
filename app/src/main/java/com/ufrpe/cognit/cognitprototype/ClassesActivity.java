@@ -8,6 +8,8 @@ import android.widget.ImageButton;
 
 public class ClassesActivity extends AppCompatActivity {
 
+    public static int state;
+
     ImageButton btnActivity;
     ImageButton btnChallenge;
 
@@ -22,16 +24,23 @@ public class ClassesActivity extends AppCompatActivity {
         btnActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goResolve = new Intent(ClassesActivity.this, ResolveActivity.class);
-                startActivity(goResolve);
+                if (state == 0) {
+                    Intent goResolve = new Intent(ClassesActivity.this, TeacherContentActivity.class);
+                    startActivity(goResolve);
+                }
             }
         });
 
         btnChallenge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goResolve = new Intent(ClassesActivity.this, ResolveActivity.class);
-                startActivity(goResolve);
+                if (state == 0) {
+                    Intent goResolve = new Intent(ClassesActivity.this, ResolveActivity.class);
+                    startActivity(goResolve);
+                } else if (state == 1){
+                    Intent goResolve = new Intent(ClassesActivity.this, TeacherContentActivity.class);
+                    startActivity(goResolve);
+                }
             }
         });
     }

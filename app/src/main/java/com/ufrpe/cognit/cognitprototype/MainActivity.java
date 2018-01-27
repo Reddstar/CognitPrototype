@@ -1,6 +1,5 @@
 package com.ufrpe.cognit.cognitprototype;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,15 +24,9 @@ public class MainActivity extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (defineProfile(edtCode.getText().toString())){
-                    Intent intentTeacher = new Intent(MainActivity.this, TeacherMenuActivity.class);
-                    startActivity(intentTeacher);
-                    finish();
-                } else {
-                    Intent intentTeacher = new Intent(MainActivity.this, StudentMenuActivity.class);
-                    startActivity(intentTeacher);
-                    finish();
-                }
+                Intent intentStudent = new Intent(MainActivity.this, MyInfoActivity.class);
+                startActivity(intentStudent);
+                finish();
             }
         });
     }

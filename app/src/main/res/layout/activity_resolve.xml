@@ -11,7 +11,13 @@
     <ImageButton
         android:id="@+id/btn_screen"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="480dp"
+        android:background="@null"/>
+    <ImageButton
+        android:id="@+id/btn_magic"
+        android:layout_below="@+id/btn_screen"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:background="@null"/>
 
 </RelativeLayout>

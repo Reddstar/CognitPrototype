@@ -37,7 +37,8 @@ public class StudentMenuActivity extends AppCompatActivity {
         btnClasses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goClasses = new Intent(StudentMenuActivity.this, ClassesActivity.class);
+                ClassesActivity.state = 0;
+                Intent goClasses = new Intent(StudentMenuActivity.this, WorksActivity.class);
                 startActivity(goClasses);
             }
         });

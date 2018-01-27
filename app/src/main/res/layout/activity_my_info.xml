@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ufrpe.cognit.cognitprototype.TeacherMenuActivity"
-    android:background="@drawable/menu_art">
+    tools:context="com.ufrpe.cognit.cognitprototype.MyInfoActivity"
+    android:background="@drawable/my_info_art">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/btn_content"
+            android:src="@drawable/btn_continue"
             android:backgroundTint="@color/colorPrimary"
             android:layout_below="@+id/edtcpf"
             android:layout_marginTop="30dp"/>
